@@ -5,7 +5,8 @@
   "description": "Kaspa Wallet PWA",
   "main": "pwa.js",
   "scripts": {
-    "prepare": "npx webpack"
+    "prepare": "npx webpack",
+    "start": "node pwa.js --grpc 127.0.0.1:16110 --mainnet --debug --verbose --host 0.0.0.0"
   },
   "author": "ASPECTRON Inc.",
   "license": "ISC",
@@ -18,9 +19,10 @@
     "@kaspa/grpc": ">=1.4.0",
     "@kaspa/grpc-node": ">=1.0.8",
     "@kaspa/grpc-web": ">=1.0.2",
-    "@kaspa/ux": "file:../kaspa-ux",
-    "@kaspa/wallet": ">=1.4.26",
-    "@kaspa/wallet-worker": ">=1.1.25",
+    "@kaspa/ux": "file:../htn-ux",
+    "@kaspa/wallet": "file:../htn-wallet",
+    "@kaspa/wallet-worker": "file:../htn-wallet-worker",
+    "@kaspa/core-lib": "file:../htn-core-lib",
     "@webcomponents/webcomponentsjs": "2.6.0",
     "buffer": "6.0.3",
     "cloudflare": "2.9.1",
@@ -31,12 +33,15 @@
     "decimal.js": "10.4.0",
     "express": "4.17.1",
     "express-session": "1.17.1",
-    "lit-element": "3.2.2",
+    "lit-element": "^4.0.4",
+    "lit-html": "^3.1.2",
     "node-fetch": "2.6.7",
     "sockjs": "0.3.24",
     "sockjs-client": "1.6.1",
     "url": "0.11.0",
-    "ws": "7.5.9"
+    "vm-browserify": "^1.1.2",
+    "ws": "7.5.9",
+    "secp256k1-wasm": ">=2.0.0"
   },
   "devDependencies": {
     "acorn": "8.8.0",

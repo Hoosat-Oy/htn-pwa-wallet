@@ -6,7 +6,7 @@ const WorkboxPlugin = require('workbox-webpack-plugin');
 const {version, codename} = pkg;
 const PWA = {version, codename};
 //console.log("webpack.optimize.DedupePlugin", webpack)
-let mode = "production";
+let mode = "development";
 let watch = false;
 //mode = "development"; watch=true;
 console.log("MODE:", mode)
