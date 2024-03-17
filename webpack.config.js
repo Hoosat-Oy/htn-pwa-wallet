@@ -50,10 +50,14 @@ module.exports = {
       "process": require.resolve("process/browser"),
       "crypto": require.resolve("crypto-browserify"),
       "stream": require.resolve("stream-browserify"),
+      "vm": require.resolve("vm-browserify"),
       "os": false,
       "nw.gui": false,
       "@kaspa/wallet-worker": require.resolve("./node_modules/@kaspa/wallet-worker")
   	}
+  },
+  experiments: {
+    asyncWebAssembly: true,
   },
   output: {
     filename: '[name].js',
