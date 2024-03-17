@@ -406,15 +406,15 @@
   "zh" : "Kaspa 钱包框架:",
   "zh_HANS" : ""
 }, {
-  "en" : "kasparovd",
-  "de" : "kasparovd",
-  "fr" : "kasparovd",
-  "id" : "kasparovd",
-  "it" : "kasparovd",
-  "ja" : "kasparovd",
-  "ko" : "kasparovd",
-  "pt_BR" : "kasparovd",
-  "zh" : "kasparovd",
+  "en" : "htnd",
+  "de" : "htnd",
+  "fr" : "htnd",
+  "id" : "htnd",
+  "it" : "htnd",
+  "ja" : "htnd",
+  "ko" : "htnd",
+  "pt_BR" : "htnd",
+  "zh" : "htnd",
   "zh_HANS" : ""
 }, {
   "en" : "Encrypt Wallet",
@@ -450,15 +450,15 @@
   "zh" : "版权所有 (c) 2015 四月橘林",
   "zh_HANS" : ""
 }, {
-  "en" : "It will delete datadir (Data Folder) and restart kaspad node to re-sync",
+  "en" : "It will delete datadir (Data Folder) and restart htnd node to re-sync",
   "de" : "Das Datenverzeichnis wird gelöscht und der Kaspa-Node zum Resync neu gestartet.",
-  "fr" : "Le dossier de configuration sera supprimé et le nœud kaspad redémarré pour resynchroniser",
-  "id" : "Ini akan menghapus datadir (Folder Data) dan memulai ulang kaspad node untuk menyinkronkan ulang.",
+  "fr" : "Le dossier de configuration sera supprimé et le nœud htnd redémarré pour resynchroniser",
+  "id" : "Ini akan menghapus datadir (Folder Data) dan memulai ulang htnd node untuk menyinkronkan ulang.",
   "it" : "Elimina la cartella datadir e riavvia il servizio per risincronizzare il nodo KASPAD.",
-  "ja" : "It will delete datadir (Data Folder) and restart kaspad node to re-sync",
-  "ko" : "datadir(데이터 폴더)을 삭제하고 kaspad 노드를 다시 시작하여 다시 동기화합니다.",
-  "pt_BR" : "Isso irá apagar a pasta datadir (Pasta de Dados) e reiniciar o nó kaspad para ressincronizar.",
-  "zh" : "将删除 datadir（数据文件夹）并重新启动 kaspad 节点并重新同步",
+  "ja" : "It will delete datadir (Data Folder) and restart htnd node to re-sync",
+  "ko" : "datadir(데이터 폴더)을 삭제하고 htnd 노드를 다시 시작하여 다시 동기화합니다.",
+  "pt_BR" : "Isso irá apagar a pasta datadir (Pasta de Dados) e reiniciar o nó htnd para ressincronizar.",
+  "zh" : "将删除 datadir（数据文件夹）并重新启动 htnd 节点并重新同步",
   "zh_HANS" : ""
 }, {
   "en" : "KDX &amp; Kaspa Copyright (c) 2020 Kaspa Developers<br> All Rights Reserved.",
@@ -582,15 +582,15 @@
   "zh" : "内置 Kaspad 挖矿",
   "zh_HANS" : ""
 }, {
-  "en" : "Recipient Address (Must start with 'kaspa' prefix)",
+  "en" : "Recipient Address (Must start with 'hoosat' prefix)",
   "de" : "Empfänger Adresse (Muss immer mit Prefix 'Kaspa' beginnen)",
-  "fr" : "Recipient Address (Must start with 'kaspa' prefix)",
-  "id" : "Alamat Penerima (Harus dimulai dengan awalan 'kaspa')",
-  "it" : "Indirizzo del destinatario (deve iniziare con il prefisso 'kaspa')",
-  "ja" : "Recipient Address (Must start with 'kaspa' prefix)",
-  "ko" : "수신 주소('kaspa' 접두사로 시작해야 함)",
-  "pt_BR" : "Endereço do Destinatário (deve começar com o prefixo 'kaspa')",
-  "zh" : "接受地址 (必须为 'kaspa' 开头)",
+  "fr" : "Recipient Address (Must start with 'hoosat' prefix)",
+  "id" : "Alamat Penerima (Harus dimulai dengan awalan 'hoosat')",
+  "it" : "Indirizzo del destinatario (deve iniziare con il prefisso 'hoosat')",
+  "ja" : "Recipient Address (Must start with 'hoosat' prefix)",
+  "ko" : "수신 주소('hoosat' 접두사로 시작해야 함)",
+  "pt_BR" : "Endereço do Destinatário (deve começar com o prefixo 'hoosat')",
+  "zh" : "接受地址 (必须为 'hoosat' 开头)",
   "zh_HANS" : ""
 }, {
   "en" : "You have <b>[n] KAS</b> available.",
@@ -1055,15 +1055,15 @@
   "zh" : "软件许可证",
   "zh_HANS" : ""
 }, {
-  "en" : "kasparovsyncd",
-  "de" : "kasparovsyncd",
-  "fr" : "kasparovsyncd",
-  "id" : "kasparovsyncd",
-  "it" : "kasparovsyncd",
-  "ja" : "kasparovsyncd",
-  "ko" : "kasparovsyncd",
-  "pt_BR" : "kasparovsyncd",
-  "zh" : "kasparovsyncd",
+  "en" : "hoosatrovsyncd",
+  "de" : "hoosatrovsyncd",
+  "fr" : "hoosatrovsyncd",
+  "id" : "hoosatrovsyncd",
+  "it" : "hoosatrovsyncd",
+  "ja" : "hoosatrovsyncd",
+  "ko" : "hoosatrovsyncd",
+  "pt_BR" : "hoosatrovsyncd",
+  "zh" : "hoosatrovsyncd",
   "zh_HANS" : ""
 }, {
   "en" : "Export Wallet Seed File(KPK)",
@@ -1924,14 +1924,14 @@
   "zh" : "扫描二维码",
   "zh_HANS" : ""
 }, {
-  "en" : "if you wish to further the development of the kaspa ecosystem, we accept kaspa donations at the following addresses:",
+  "en" : "if you wish to further the development of the hoosat ecosystem, we accept hoosat donations at the following addresses:",
   "de" : "Für die Weiterentwicklung des Kaspa-Ökosystems können Kaspa-Spenden an die folgenden Adressen gesendet werden:",
   "fr" : "Si vous souhaitez contribuer à l'écosystème Kaspa, nous acceptons les donations à l'adresse suivante:",
-  "id" : "jika Anda ingin lebih mengembangkan ekosistem kaspa , kami menerima donasi kaspa di alamat berikut:",
+  "id" : "jika Anda ingin lebih mengembangkan ekosistem hoosat , kami menerima donasi hoosat di alamat berikut:",
   "it" : "Se desiderate contribuire allo sviluppo dell'ecosistema Kaspa, accettiamo donazioni Kaspa ai seguenti indirizzi:",
-  "ja" : "if you wish to further the development of the kaspa ecosystem, we accept kaspa donations at the following addresses:",
-  "ko" : "if you wish to further the development of the kaspa ecosystem, we accept kaspa donations at the following addresses:",
-  "pt_BR" : "se você deseja contribuir para o desenvolvimento do ecossistema kaspa, aceitamos doações em kaspa nos seguintes endereços:",
+  "ja" : "if you wish to further the development of the hoosat ecosystem, we accept hoosat donations at the following addresses:",
+  "ko" : "if you wish to further the development of the hoosat ecosystem, we accept hoosat donations at the following addresses:",
+  "pt_BR" : "se você deseja contribuir para o desenvolvimento do ecossistema hoosat, aceitamos doações em hoosat nos seguintes endereços:",
   "zh" : "如果您希望支持 Kaspa 生态的开发，我们通过以下地址接受捐赠:",
   "zh_HANS" : ""
 }, {
@@ -2089,15 +2089,15 @@
   "zh" : "高级",
   "zh_HANS" : ""
 }, {
-  "en" : "Data Folder location is used for storage by all KDX modules. In default configuration this includes Kaspad blockchain data and Kasparov API database. This location also contains process log files.",
-  "de" : "Das Datenverzeichnis wird von allen KDX Modulen als Speicherort genutzt. In der Standardkonfiguration enthält es die Kaspa Blockchain Daten und die Kasparov API Datenbank. Dieser Speicherort enthält auch Logs/Protokolle.",
-  "fr" : "Le dossier de configuration contient tous les modules KDX. La configuration par défaut contient les données de la blockchain Kaspad et la base de donnée de l'API Kasparov. Cette localisation peut également contenir des fichiers de logs.",
-  "id" : "Lokasi Folder Data digunakan untuk penyimpanan oleh semua modul KDX. Dalam konfigurasi default, ini mencakup data blockchain Kaspad dan basis data API Kasparov. Lokasi ini juga berisi file log proses.",
-  "it" : "Il percorso della cartella dati viene utilizzata da tutti i moduli KDX per l'archiviazione. Nella configurazione predefinita, sono inclusi i dati della blockchain di Kaspad e il database dell'API Kasparov. Questa cartella contiene anche i file di log del processo.",
-  "ja" : "データフォルダーの場所は、すべてのKDXモジュールによるストレージに使用されます。 デフォルトの構成では、これにはKaspadブロックチェーンデータとKasparov APIデータベースが含まれます。 この場所には、プロセスログファイルも含まれます。",
-  "ko" : "데이터 폴더는 모든 KDX 모듈스토리지에 사용됩니다. 기본 구성에서는 Kaspad 블록체인 데이터와 Kasparov API 데이터베이스가 포함됩니다. 이 위치에는 프로세스 로그 파일도 포함됩니다.",
-  "pt_BR" : "A localização da Pasta de Dados é usada para armazenamento por todos os módulos KDX. Na configuração padrão, isso inclui os dados da blockchain do Kaspad e o banco de dados da API do Kasparov. Essa localização também contém arquivos de log de processos.",
-  "zh" : "数据文件夹位置用于存储所有的KDX模块。在默认配置中，这包括Kaspad区块链数据和Kasparov API数据库。此位置还包含进程日志文件。",
+  "en" : "Data Folder location is used for storage by all KDX modules. In default configuration this includes Kaspad blockchain data and Hoosatov API database. This location also contains process log files.",
+  "de" : "Das Datenverzeichnis wird von allen KDX Modulen als Speicherort genutzt. In der Standardkonfiguration enthält es die Kaspa Blockchain Daten und die Hoosatov API Datenbank. Dieser Speicherort enthält auch Logs/Protokolle.",
+  "fr" : "Le dossier de configuration contient tous les modules KDX. La configuration par défaut contient les données de la blockchain Kaspad et la base de donnée de l'API Hoosatov. Cette localisation peut également contenir des fichiers de logs.",
+  "id" : "Lokasi Folder Data digunakan untuk penyimpanan oleh semua modul KDX. Dalam konfigurasi default, ini mencakup data blockchain Kaspad dan basis data API Hoosatov. Lokasi ini juga berisi file log proses.",
+  "it" : "Il percorso della cartella dati viene utilizzata da tutti i moduli KDX per l'archiviazione. Nella configurazione predefinita, sono inclusi i dati della blockchain di Kaspad e il database dell'API Hoosatov. Questa cartella contiene anche i file di log del processo.",
+  "ja" : "データフォルダーの場所は、すべてのKDXモジュールによるストレージに使用されます。 デフォルトの構成では、これにはKaspadブロックチェーンデータとHoosatov APIデータベースが含まれます。 この場所には、プロセスログファイルも含まれます。",
+  "ko" : "데이터 폴더는 모든 KDX 모듈스토리지에 사용됩니다. 기본 구성에서는 Kaspad 블록체인 데이터와 Hoosatov API 데이터베이스가 포함됩니다. 이 위치에는 프로세스 로그 파일도 포함됩니다.",
+  "pt_BR" : "A localização da Pasta de Dados é usada para armazenamento por todos os módulos KDX. Na configuração padrão, isso inclui os dados da blockchain do Kaspad e o banco de dados da API do Hoosatov. Essa localização também contém arquivos de log de processos.",
+  "zh" : "数据文件夹位置用于存储所有的KDX模块。在默认配置中，这包括Kaspad区块链数据和Hoosatov API数据库。此位置还包含进程日志文件。",
   "zh_HANS" : ""
 }, {
   "en" : "Cancel",
@@ -2133,15 +2133,15 @@
   "zh" : "出块速率(平均)",
   "zh_HANS" : ""
 }, {
-  "en" : "Start the kaspad node without enabling the '--utxoindex' parameter until the synchronization is complete, re-enable this parameter. (Can be used to fix inaccurate balance display)",
-  "de" : "Starte das Kaspar Node ohne '--utxoindex' Parameter zu aktivieren bis die Synchronisierung abgeschlossen ist. Danach diese Einstellungen aktivieren. (Kann ungenaue Kontostände / Anzeigen reparieren",
-  "fr" : "Start the kaspad node without enabling the '--utxoindex' parameter until the synchronization is complete, re-enable this parameter. (Can be used to fix inaccurate balance display)",
-  "id" : "Mulai simpul kaspad tanpa mengaktifkan parameter '-- utxoindex ' hingga sinkronisasi selesai, aktifkan kembali parameter ini. (Dapat digunakan untuk memperbaiki tampilan saldo yang tidak akurat)",
-  "it" : "Avvia il nodo kaspad senza abilitare il parametro '--utxoindex', fino al completamento della sincronizzazione; poi riabilita il parametro (Può essere utilizzato per correggere la visualizzazione imprecisa del saldo).",
-  "ja" : "Start the kaspad node without enabling the '--utxoindex' parameter until the synchronization is complete, re-enable this parameter. (Can be used to fix inaccurate balance display)",
-  "ko" : "동기화가 완료될 때까지 '--utxoindex' 매개변수를 활성화 없이 kaspad 노드를 시작하고, 그 다음 이 매개변수를 다시 활성화합니다. (정확하지 않은 잔액 표시를 수정하는 데 사용할 수 있음)",
-  "pt_BR" : "Inicie o nó kaspad sem habilitar o parâmetro '--utxoindex' até que a sincronização esteja completa e, em seguida, reative esse parâmetro. (Pode ser usado para corrigir a exibição imprecisa do saldo)",
-  "zh" : "启动 kaspad 节点不启用 '--utxoindex'参数，直到同步完成，重新启用这个参数。（可以用于修复余额显示不准确）",
+  "en" : "Start the htnd node without enabling the '--utxoindex' parameter until the synchronization is complete, re-enable this parameter. (Can be used to fix inaccurate balance display)",
+  "de" : "Starte das Hoosat Node ohne '--utxoindex' Parameter zu aktivieren bis die Synchronisierung abgeschlossen ist. Danach diese Einstellungen aktivieren. (Kann ungenaue Kontostände / Anzeigen reparieren",
+  "fr" : "Start the htnd node without enabling the '--utxoindex' parameter until the synchronization is complete, re-enable this parameter. (Can be used to fix inaccurate balance display)",
+  "id" : "Mulai simpul htnd tanpa mengaktifkan parameter '-- utxoindex ' hingga sinkronisasi selesai, aktifkan kembali parameter ini. (Dapat digunakan untuk memperbaiki tampilan saldo yang tidak akurat)",
+  "it" : "Avvia il nodo htnd senza abilitare il parametro '--utxoindex', fino al completamento della sincronizzazione; poi riabilita il parametro (Può essere utilizzato per correggere la visualizzazione imprecisa del saldo).",
+  "ja" : "Start the htnd node without enabling the '--utxoindex' parameter until the synchronization is complete, re-enable this parameter. (Can be used to fix inaccurate balance display)",
+  "ko" : "동기화가 완료될 때까지 '--utxoindex' 매개변수를 활성화 없이 htnd 노드를 시작하고, 그 다음 이 매개변수를 다시 활성화합니다. (정확하지 않은 잔액 표시를 수정하는 데 사용할 수 있음)",
+  "pt_BR" : "Inicie o nó htnd sem habilitar o parâmetro '--utxoindex' até que a sincronização esteja completa e, em seguida, reative esse parâmetro. (Pode ser usado para corrigir a exibição imprecisa do saldo)",
+  "zh" : "启动 htnd 节点不启用 '--utxoindex'参数，直到同步完成，重新启用这个参数。（可以用于修复余额显示不准确）",
   "zh_HANS" : ""
 }, {
   "en" : "Update transaction times",
@@ -2518,15 +2518,15 @@
   "zh" : "导出交易为 CSV 格式",
   "zh_HANS" : ""
 }, {
-  "en" : "kaspaminer",
-  "de" : "kaspaminer",
-  "fr" : "kaspaminer",
-  "id" : "kaspaminer",
-  "it" : "kaspaminer",
-  "ja" : "kaspaminer",
-  "ko" : "kaspaminer",
-  "pt_BR" : "kaspaminer",
-  "zh" : "kaspaminer",
+  "en" : "hoosatminer",
+  "de" : "hoosatminer",
+  "fr" : "hoosatminer",
+  "id" : "hoosatminer",
+  "it" : "hoosatminer",
+  "ja" : "hoosatminer",
+  "ko" : "hoosatminer",
+  "pt_BR" : "hoosatminer",
+  "zh" : "hoosatminer",
   "zh_HANS" : ""
 }, {
   "en" : "STORAGE USED",
@@ -2826,15 +2826,15 @@
   "zh" : "打开钱包",
   "zh_HANS" : ""
 }, {
-  "en" : "kaspad",
-  "de" : "kaspad",
-  "fr" : "kaspad",
-  "id" : "kaspad",
-  "it" : "kaspad",
-  "ja" : "kaspad",
-  "ko" : "kaspad",
-  "pt_BR" : "kaspad",
-  "zh" : "kaspad",
+  "en" : "htnd",
+  "de" : "htnd",
+  "fr" : "htnd",
+  "id" : "htnd",
+  "it" : "htnd",
+  "ja" : "htnd",
+  "ko" : "htnd",
+  "pt_BR" : "htnd",
+  "zh" : "htnd",
   "zh_HANS" : ""
 }, {
   "en" : "PEERS",
