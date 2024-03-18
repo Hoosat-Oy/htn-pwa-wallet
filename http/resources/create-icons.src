@@ -21,6 +21,7 @@ convert icon1024.png -resize 70x70 ./icons/ms-icon-70x70.png
 convert icon1024.png -resize 192x192 ./icons/apple-icon-precomposed.png
 convert icon1024.png -resize 192x192 ./icons/apple-icon.png
 convert icon1024.png -resize 192x192 ./icons/icon.png
+convert icon1024.png -resize 512x512 ./logo512.png
 convert ./icons/icon.png -define icon:auto-resize=16,32,48,64,128,256 ./icons/favicon.ico
 
 convert logo512.png -resize 16x16 ./icons/favicon-16x16.png
