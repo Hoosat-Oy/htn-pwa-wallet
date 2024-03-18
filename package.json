@@ -6,7 +6,7 @@
   "main": "pwa.js",
   "scripts": {
     "prepare": "npx webpack",
-    "start": "node pwa.js --grpc mainnet-node-4.hoosat.fi:16110 --mainnet --debug --verbose --host 0.0.0.0"
+    "start": "node pwa.js --grpc localhost:16110 --mainnet --debug --verbose --host 0.0.0.0"
   },
   "author": "ASPECTRON Inc.",
   "license": "ISC",
