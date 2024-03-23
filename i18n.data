@@ -98,15 +98,15 @@
   "zh" : "正在进行的交易",
   "zh_HANS" : ""
 }, {
-  "en" : "Import Wallet Seed File(KPK)",
-  "de" : "Wallet Seed Datei importieren (KPK)",
-  "fr" : "Importer la seed du portefeuille(KPK)",
-  "id" : "Impor Seed File Dompet(KPK)",
-  "it" : "Importa il file contenente il seed del wallet (KPK)",
+  "en" : "Import Wallet Seed File",
+  "de" : "Wallet Seed Datei importieren ",
+  "fr" : "Importer la seed du portefeuille",
+  "id" : "Impor Seed File Dompet",
+  "it" : "Importa il file contenente il seed del wallet ",
   "ja" : "KPKウォレットファイルをインポートする",
-  "ko" : "시드 파일(KPK)을 불러오세요",
-  "pt_BR" : "Importar Arquivo de Semente de Carteira (KPK)",
-  "zh" : "导入钱包备份文件(KPK)",
+  "ko" : "시드 파일을 불러오세요",
+  "pt_BR" : "Importar Arquivo de Semente de Carteira ",
+  "zh" : "导入钱包备份文件",
   "zh_HANS" : ""
 }, {
   "en" : "Flow-ux",
@@ -1066,15 +1066,15 @@
   "zh" : "hoosatrovsyncd",
   "zh_HANS" : ""
 }, {
-  "en" : "Export Wallet Seed File(KPK)",
-  "de" : "Wallet Seed Datei exportieren (KPK)",
-  "fr" : "Exporter la seed du portefeuille(KPK)",
-  "id" : "Ekspor File Benih Dompet(KPK)",
-  "it" : "Esporta il file contenente il seed del wallet (KPK)",
+  "en" : "Export Wallet Seed File",
+  "de" : "Wallet Seed Datei exportieren ",
+  "fr" : "Exporter la seed du portefeuille",
+  "id" : "Ekspor File Benih Dompet",
+  "it" : "Esporta il file contenente il seed del wallet ",
   "ja" : "KPKウォレットファイルをエクスポートする",
-  "ko" : "지갑 시드 파일 내보내기 (KPK)",
-  "pt_BR" : "Exportar arquivo da semente da carteira (KPK)",
-  "zh" : "导出KPK钱包文件(KPK)",
+  "ko" : "지갑 시드 파일 내보내기 ",
+  "pt_BR" : "Exportar arquivo da semente da carteira ",
+  "zh" : "导出KPK钱包文件",
   "zh_HANS" : ""
 }, {
   "en" : "Blue Score",
@@ -1418,15 +1418,15 @@
   "zh" : "下一步",
   "zh_HANS" : ""
 }, {
-  "en" : "Import Wallet Seed File (KPK)",
-  "de" : "Wallet Seed Datei importieren (KPK)",
-  "fr" : "Importer la seed du portefeuille (KPK)",
-  "id" : "Impor Seed File Dompet (KPK)",
-  "it" : "Importa il file contenente il seed del wallet (KPK)",
-  "ja" : "Import Wallet Seed File (KPK)",
-  "ko" : "시드 파일(KPK)을 불러오세요",
-  "pt_BR" : "Importar Arquivo de Semente de Carteira (KPK)",
-  "zh" : "导入钱包备份文件 (KPK)",
+  "en" : "Import Wallet Seed File ",
+  "de" : "Wallet Seed Datei importieren ",
+  "fr" : "Importer la seed du portefeuille ",
+  "id" : "Impor Seed File Dompet ",
+  "it" : "Importa il file contenente il seed del wallet ",
+  "ja" : "Import Wallet Seed File ",
+  "ko" : "시드 파일을 불러오세요",
+  "pt_BR" : "Importar Arquivo de Semente de Carteira ",
+  "zh" : "导入钱包备份文件 ",
   "zh_HANS" : ""
 }, {
   "en" : "Wallet Status:",
@@ -2628,15 +2628,15 @@
   "zh" : "状态",
   "zh_HANS" : ""
 }, {
-  "en" : "Export Wallet Seed File (KPK)",
-  "de" : "Wallet Seed Datei exportieren (KPK)",
-  "fr" : "Exporter la seed du portefeuille (KPK)",
-  "id" : "Ekspor Berkas Benih Dompet (KPK)",
-  "it" : "Esporta il file contenente il seed del Wallet (KPK)",
+  "en" : "Export Wallet Seed File ",
+  "de" : "Wallet Seed Datei exportieren ",
+  "fr" : "Exporter la seed du portefeuille ",
+  "id" : "Ekspor Berkas Benih Dompet ",
+  "it" : "Esporta il file contenente il seed del Wallet ",
   "ja" : "KPKウォレットファイルをエクスポートする",
-  "ko" : "지갑 시드 파일 내보내기 (KPK)",
-  "pt_BR" : "Exportar arquivo da semente da carteira (KPK)",
-  "zh" : "导出你的钱包备份 (KPK)",
+  "ko" : "지갑 시드 파일 내보내기 ",
+  "pt_BR" : "Exportar arquivo da semente da carteira ",
+  "zh" : "导出你的钱包备份 ",
   "zh_HANS" : ""
 }, {
   "en" : "Incorrect password.",
