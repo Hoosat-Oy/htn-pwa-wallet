@@ -489,7 +489,7 @@ class KaspaPWA extends EventEmitter {
 		const program = this.program = new Command();
 		program
 			.version('0.0.1', '--version')
-			.description('Kaspa Wallet')
+			.description('Hoosat Wallet')
 			.helpOption('--help','display help for command')
 			.option('--log <level>',`set log level ${logLevels.join(', ')}`, (level)=>{
 				if(!logLevels.includes(level))
