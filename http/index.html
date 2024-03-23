@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<meta charset="UTF-8" />
 	<title>Kaspa Wallet</title>
 	<meta name="viewport" content="width=device-width, user-scalable=no">
-	
+
 	<!-- --------------------------------------------------------- -->
 
 	<link rel="manifest" href="/manifest.json">
@@ -28,7 +29,7 @@
 	<link rel="apple-touch-icon" sizes="144x144" href="/resources/icons/apple-icon-144x144.png">
 	<link rel="apple-touch-icon" sizes="152x152" href="/resources/icons/apple-icon-152x152.png">
 	<link rel="apple-touch-icon" sizes="180x180" href="/resources/icons/apple-icon-180x180.png">
-	<link rel="icon" type="image/png" sizes="192x192"  href="/resources/icons/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="/resources/icons/android-icon-192x192.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="/resources/icons/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="96x96" href="/resources/icons/favicon-96x96.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="/resources/icons/favicon-16x16.png">
@@ -47,19 +48,19 @@
 	<script src="/sockjs/sockjs.js"></script>
 	<script type="text/javascript">
 		var flow = {
-			debug:true,
-			baseUrl:"/flow/flow-ux/",
-			theme:{
-				iconPath:"/resources/extern/fonts/fontawesome/sprites/",
-				iconFile:"light",
-				icons:{
+			debug: true,
+			baseUrl: "/flow/flow-ux/",
+			theme: {
+				iconPath: "/resources/extern/fonts/fontawesome/sprites/",
+				iconFile: "light",
+				icons: {
 					//"info-circle": "light:acorn"
 				}
 			}
 		}
 		var KaspaConfig = {
-			baseUrl:"/kaspa-ux",
-			ident:"hoosat:ident"
+			baseUrl: "/kaspa-ux",
+			ident: "hoosat:ident"
 		}
 		if ('serviceWorker' in navigator) {
 			/*
@@ -73,11 +74,11 @@
 			*/
 
 			navigator.serviceWorker.getRegistrations()
-			.then( function(registrations) {
-				for(let registration of registrations) {
-					registration.unregister();
-				}
-			}); 
+				.then(function (registrations) {
+					for (let registration of registrations) {
+						registration.unregister();
+					}
+				});
 		}
 
 	</script>
@@ -101,14 +102,19 @@
 		test();
 	</script-->
 	<style type="text/css">
-		html{height:100%}
-		body{
+		html {
+			height: 100%
+		}
+
+		body {
 			position: fixed;
-			width:100vw;
-      		height:100vh;
+			width: 100vw;
+			height: 100vh;
+			background-color: #116466;
 		}
 	</style>
 </head>
+
 <body class="loading flow-theme-light v-box mini-left-menu swipeable-container">
 	<svg style="display:none">
 		<use href="/fonts/fontawesome/sprites/light.svg#home" />
@@ -134,4 +140,5 @@
 		}
 	</script-->
 </body>
+
 </html>
