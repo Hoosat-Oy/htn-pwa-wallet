@@ -181,7 +181,7 @@ class KaspaPWA extends EventEmitter {
 							indexHtml = data.replace(
 								`<script type="module" src="/dist/wallet-app.js"></script>`,
 								`\n${script}\n\t<script type="module" src="/dist/wallet-app.js?v=${hash}"></script>`);
-							indexHtml = indexHtml.replace('ident:"hoosat-testnet:ident"', `ident:"${hash}"`)
+							indexHtml = indexHtml.replace('ident:"hoosattest:ident"', `ident:"${hash}"`)
 							//console.log(indexHtml);
 							resolve();
 						})
