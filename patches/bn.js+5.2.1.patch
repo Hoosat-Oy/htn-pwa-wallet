@@ -1,0 +1,43 @@
+diff --git a/node_modules/bn.js/lib/bn.js b/node_modules/bn.js/lib/bn.js
+index adecc94..d0d5c27 100644
+--- a/node_modules/bn.js/lib/bn.js
++++ b/node_modules/bn.js/lib/bn.js
+@@ -110,26 +110,34 @@
+     }
+   };
+ 
+-  BN.prototype._initNumber = function _initNumber (number, base, endian) {
++  BN.prototype._initNumber = function _initNumber(number, base, endian) {
+     if (number < 0) {
+       this.negative = 1;
+       number = -number;
+     }
++
++    if (number >= 0x20000000000000) {
++      const largeNumber = new BN(number.toString(), base || 10);
++      this.words = largeNumber.words;
++      this.length = largeNumber.length;
++      this.negative = largeNumber.negative;
++      return;
++    }
++
+     if (number < 0x4000000) {
+       this.words = [number & 0x3ffffff];
+       this.length = 1;
+     } else if (number < 0x10000000000000) {
+       this.words = [
+         number & 0x3ffffff,
+-        (number / 0x4000000) & 0x3ffffff
++        (number / 0x4000000) & 0x3ffffff,
+       ];
+       this.length = 2;
+     } else {
+-      assert(number < 0x20000000000000); // 2 ^ 53 (unsafe)
+       this.words = [
+         number & 0x3ffffff,
+         (number / 0x4000000) & 0x3ffffff,
+-        1
++        1,
+       ];
+       this.length = 3;
+     }

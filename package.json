@@ -5,6 +5,7 @@
   "description": "Hoosat Wallet PWA",
   "main": "pwa.js",
   "scripts": {
+    "postinstall": "patch-package",
     "prepare": "npx webpack",
     "start": "node pwa.js --grpc localhost:42420 --mainnet --debug --verbose --host 0.0.0.0"
   },
@@ -36,6 +37,7 @@
     "lit-element": "^4.0.4",
     "lit-html": "^3.1.2",
     "node-fetch": "2.6.7",
+    "patch-package": "^8.0.0",
     "secp256k1-wasm": ">=2.0.0",
     "sockjs": "0.3.24",
     "sockjs-client": "1.6.1",
