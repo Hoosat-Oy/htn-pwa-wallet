@@ -17,7 +17,7 @@
     "@aspectron/flow-router": "*",
     "@aspectron/flow-utils": "*",
     "@aspectron/flow-ux": "1.1.1",
-    "@hoosat/core-lib": ">=1.6.6-1",
+    "@hoosat/core-lib": ">=1.6.8",
     "@kaspa/grpc": ">=1.4.0",
     "@kaspa/grpc-node": ">=1.0.8",
     "@kaspa/grpc-web": ">=1.0.2",
