@@ -1,6 +1,6 @@
 {
   "name": "@hoosat/wallet-pwa",
-  "version": "1.1.37",
+  "version": "1.1.38",
   "codename": "",
   "description": "Hoosat Wallet PWA",
   "main": "pwa.js",
