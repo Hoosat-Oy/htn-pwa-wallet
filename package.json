@@ -21,7 +21,7 @@
     "@kaspa/grpc": ">=1.4.0",
     "@kaspa/grpc-node": ">=1.0.8",
     "@kaspa/grpc-web": ">=1.0.2",
-    "@hoosat/ux": ">=1.0.30",
+    "@hoosat/ux": ">=1.0.31",
     "@hoosat/wallet": ">=1.4.26",
     "@hoosat/wallet-worker": ">=1.1.25",
     "@webcomponents/webcomponentsjs": "2.6.0",
