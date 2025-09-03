@@ -27,4 +27,4 @@ convert ./icons/icon.png -define icon:auto-resize=16,32,48,64,128,256 ./icons/fa
 convert logo512.png -resize 16x16 ./icons/favicon-16x16.png
 convert logo512.png -resize 32x32 ./icons/favicon-32x32.png
 convert logo512.png -resize 96x96 ./icons/favicon-96x96.png
-convert logo512.png -resize 192x192 ./logo/kaspa-192x192-white.png
+convert logo512.png -resize 192x192 ./logo/hoosat-192x192-white.png

@@ -1,198 +1,195 @@
-import {RPC} from '/@kaspa/grpc-web';
+import { RPC } from "/@kaspa/grpc-web";
 //console.log("PWA", window.PWA)
 //console.log("RPC", RPC)
-import '/style/style.js';
-import {
-	dpc, html, css, FlowApp, BaseElement, i18n
-} from '/flow/flow-ux/flow-ux.js';
-import {isMobile} from '/@kaspa/ux/kaspa-ux.js';
-export * from '/@kaspa/ux/kaspa-ux.js';
+import "/style/style.js";
+import { dpc, html, css, FlowApp, BaseElement, i18n } from "/flow/flow-ux/flow-ux.js";
+import { isMobile } from "/@hoosat/ux/hoosat-ux.js";
+export * from "/@hoosat/ux/hoosat-ux.js";
 
-window.__testI18n = (test)=>i18n.setTesting(!!test);
+window.__testI18n = (test) => i18n.setTesting(!!test);
 
-class KaspaWalletHeader extends BaseElement{
-	static get styles(){
-		return css`
-			:host{display:block}
-			.container{
-				display:flex;align-items:center;padding:5px;
-			}
-			.logo{
-				height:30px;width:30px;/*background-color:#DDD;*/
-				background:no-repeat url('/resources/logo512.png') center;
-				background-size:contain;
-			}
-			.flex{flex:1}
-
-		`
-	}
-	render(){
-		return html`
-			<div class="container">
-				<div class="logo"></div>
-				<div class="flex"></div>
-				<!--a class="link">About us</a-->
-			</div>
-		`
-	}
+class HoosatWalletHeader extends BaseElement {
+  static get styles() {
+    return css`
+      :host {
+        display: block;
+      }
+      .container {
+        display: flex;
+        align-items: center;
+        padding: 5px;
+      }
+      .logo {
+        height: 30px;
+        width: 30px; /*background-color:#DDD;*/
+        background: no-repeat url("/resources/logo512.png") center;
+        background-size: contain;
+      }
+      .flex {
+        flex: 1;
+      }
+    `;
+  }
+  render() {
+    return html`
+      <div class="container">
+        <div class="logo"></div>
+        <div class="flex"></div>
+        <!--a class="link">About us</a-->
+      </div>
+    `;
+  }
 }
-KaspaWalletHeader.define("kaspa-wallet-header")
+HoosatWalletHeader.define("hoosat-wallet-header");
 
-class KaspaWalletApp extends FlowApp {
+class HoosatWalletApp extends FlowApp {
+  static get properties() {
+    return {
+      network: { type: String },
+      networks: { type: Array },
+      addresses: { type: Object },
+      available: { type: Object },
+      limits: { type: Object },
+    };
+  }
+  constructor() {
+    super();
 
-	static get properties(){
-		return {
-			network:{type:String},
-			networks:{type:Array},
-			addresses:{type:Object},
-			available:{type:Object},
-			limits:{type:Object}
-		}
-	}
-	constructor(){
-		super();
+    this.networks = ["hoosat", "hoosatdev", "hoosatreg", "hoosattest", "hoosatsim"];
+    this.network = "hoosat";
+    this.addresses = {};
+    this.available = {};
+    this.limits = {};
+    this.opt = {};
 
-		this.networks = ['hoosat', 'hoosatdev', 'hoosatreg', 'hoosattest', 'hoosatsim'];
-		this.network = "hoosat";
-		this.addresses = {};
-		this.available = {};
-		this.limits = {};
-		this.opt = {};
+    this.aliases = {
+      hoosat: "MAINNET",
+      hoosattest: "TESTNET",
+      hoosatreg: "REGNET",
+      hoosatdev: "DEVNET",
+      hoosatsim: "SIMNET",
+    };
 
-		this.aliases = {
-			hoosat : 'MAINNET',
-			hoosattest : 'TESTNET',
-			hoosatreg : 'REGNET',
-			hoosatdev : 'DEVNET',
-			hoosatsim : 'SIMNET'
-		}
+    this.initLog();
+    dpc(async () => this.init());
+    this.registerListener("popstate", (e) => {
+      let { menu = "home", args = [] } = e.state || {};
+      console.log(`popstate: ${document.location}, state: ${JSON.stringify(e.state)}`);
+      //this.setMenu(menu, args, true);
+    });
+  }
 
-		this.initLog();
-		dpc(async ()=>this.init());
-		this.registerListener("popstate", (e)=>{
-			let {menu="home", args=[]} = e.state||{};
-			console.log(`popstate: ${document.location}, state: ${JSON.stringify(e.state)}`)
-			//this.setMenu(menu, args, true);
-		});
-	}
+  async init() {
+    await this.initSocketRPC({
+      timeout: 90,
+      args: {
+        transports: ["websocket"],
+      },
+    });
+    await this.initUI();
+    dpc(() => this.setLoading(false));
+  }
 
-	async init(){
-		await this.initSocketRPC({
-			timeout : 90,
-			args:{
-				transports:["websocket"]
-			}
-		});
-		await this.initUI();
-		dpc(()=>this.setLoading(false));
-	}
+  async initUI() {
+    this.bodyEl = document.body;
+    await this.getNetwork();
+    await this.initI18n();
+  }
 
-	async initUI(){
-		this.bodyEl = document.body;
-		await this.getNetwork();
-		await this.initI18n();
-	}
+  async getNetwork() {
+    const { rpc } = flow.app;
+    let { network } = await rpc.request("get-network").catch((err) => {
+      console.log("get-network:error", err);
+    });
 
-	async getNetwork(){
-		const { rpc } = flow.app;
-		let {network} = await rpc.request("get-network")
-		.catch((err)=>{
-			console.log("get-network:error", err)
-		});
+    if (network && this.network != network) {
+      this.network = network;
+    }
+  }
 
-		if(network && this.network != network){
-			this.network = network;
-		}
-	}
+  async initI18n() {
+    i18n.setActiveLanguages(["en", "de", "fr", "id", "it", "pt_BR", "ja", "ko", "zh"]);
+    //i18n.setTesting(true);
+    const { rpc } = flow.app;
+    let { entries } = await rpc.request("get-app-i18n-entries").catch((err) => {
+      console.log("get-app-i18n-entries:error", err);
+    });
+    if (entries) i18n.setEntries(entries);
+  }
 
-	async initI18n(){
-		i18n.setActiveLanguages(['en', 'de', 'fr', 'id', 'it', 'pt_BR', 'ja', 'ko', 'zh']);
-		//i18n.setTesting(true);
-		const { rpc } = flow.app;
-		let {entries} = await rpc.request("get-app-i18n-entries")
-		.catch((err)=>{
-			console.log("get-app-i18n-entries:error", err)
-		})
-		if(entries)
-			i18n.setEntries(entries);
-	}
+  onlineCallback() {
+    const { rpc } = flow.app;
+    this.networkUpdates = rpc.subscribe(`networks`);
+    (async () => {
+      for await (const msg of this.networkUpdates) {
+        const { networks } = msg.data;
+        this.networks = networks;
+        if (!this.networks.includes(this.network)) this.network = this.networks[0];
+        console.log("available networks:", networks);
+        this.requestUpdate();
+      }
+    })().then();
 
-	onlineCallback() {
-		const { rpc } = flow.app;
-		this.networkUpdates = rpc.subscribe(`networks`);
-		(async()=>{
-			for await(const msg of this.networkUpdates) {
-				const { networks } = msg.data;
-				this.networks = networks;
-				if(!this.networks.includes(this.network))
-					this.network = this.networks[0];
-				console.log("available networks:", networks);
-				this.requestUpdate();
-			}
-		})().then();
+    this.addressUpdates = rpc.subscribe(`addresses`);
+    (async () => {
+      for await (const msg of this.addressUpdates) {
+        const { addresses } = msg.data;
+        this.addresses = addresses;
+        this.requestUpdate();
+        // this.networks = networks;
+        // console.log("available networks:",networks);
+      }
+    })().then();
 
-		this.addressUpdates = rpc.subscribe(`addresses`);
-		(async()=>{
-			for await(const msg of this.addressUpdates) {
-                const { addresses } = msg.data;
-                this.addresses = addresses;
-                this.requestUpdate();
-				// this.networks = networks;
-				// console.log("available networks:",networks);
-			}
-		})().then();
+    this.limitUpdates = rpc.subscribe(`limit`);
+    (async () => {
+      for await (const msg of this.limitUpdates) {
+        const { network, limit, available } = msg.data;
+        console.log("limits", msg.data);
+        this.limits[network] = limit;
+        this.available[network] = available;
+        if (this.network == network) this.requestUpdate();
+      }
+    })().then();
+  }
 
-		this.limitUpdates = rpc.subscribe(`limit`);
-		(async()=>{
-			for await(const msg of this.limitUpdates) {
-				const { network, limit, available } = msg.data;
-				console.log('limits',msg.data);
-				this.limits[network] = limit;
-				this.available[network] = available;
-				if(this.network == network)
-					this.requestUpdate();
-			}
-		})().then();
-	}
+  offlineCallback() {
+    this.networkUpdates?.close();
+    this.addressUpdates?.close();
+    this.limitUpdates?.close();
+  }
 
-	offlineCallback() {
-		this.networkUpdates?.close();
-		this.addressUpdates?.close();
-		this.limitUpdates?.close();
-	}
+  render() {
+    let network = this.network;
+    let address = this.addresses?.[this.network] || "";
+    let limit = this.limits?.[this.network] || "";
+    let available = this.available?.[this.network] || "";
+    let meta = { generator: "pwa" };
 
-	render(){
-		let network = this.network;
-		let address = this.addresses?.[this.network] || '';
-		let limit = this.limits?.[this.network] || '';
-		let available = this.available?.[this.network] || '';
-		let meta = {"generator":"pwa"}
+    return html`
+      ${isMobile ? "" : html`<!--hoosat-wallet-header></hoosat-wallet-header-->`}
+      <hoosat-wallet .walletMeta="${meta}" reloadonlock="true" hidefaucet="true"></hoosat-wallet>
+    `;
+  }
 
-		return html`
-		${isMobile?'':html`<!--kaspa-wallet-header></kaspa-wallet-header-->`}
-		<kaspa-wallet .walletMeta='${meta}' reloadonlock="true" hidefaucet="true"></kaspa-wallet>
-		`
-	}
+  onNetworkChange(e) {
+    console.log("on-network-change", e.detail);
+    this.network = e.detail.network;
+  }
 
-	onNetworkChange(e){
-		console.log("on-network-change", e.detail)
-		this.network = e.detail.network;
-	}
-
-	firstUpdated(){
-		super.firstUpdated();
-		console.log("app: firstUpdated")
-		this.wallet = this.renderRoot.querySelector("kaspa-wallet");
-		//console.log("this.wallet", this.wallet)
-		let verbose = localStorage.rpcverbose == 1;
-		this.wallet.setRPCBuilder(()=>{
-			return {
-				rpc: new RPC({verbose, clientConfig:{path:"/rpc"}}),
-				network: this.network
-			}
-		});
-	}
-
+  firstUpdated() {
+    super.firstUpdated();
+    console.log("app: firstUpdated");
+    this.wallet = this.renderRoot.querySelector("hoosat-wallet");
+    //console.log("this.wallet", this.wallet)
+    let verbose = localStorage.rpcverbose == 1;
+    this.wallet.setRPCBuilder(() => {
+      return {
+        rpc: new RPC({ verbose, clientConfig: { path: "/rpc" } }),
+        network: this.network,
+      };
+    });
+  }
 }
 
-KaspaWalletApp.define("kaspa-wallet-app");
+HoosatWalletApp.define("hoosat-wallet-app");

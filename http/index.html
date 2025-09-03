@@ -1,69 +1,68 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hoosat Wallet</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
 
-<head>
-	<meta charset="UTF-8" />
-	<title>Hoosat Wallet</title>
-	<meta name="viewport" content="width=device-width, user-scalable=no">
+    <!-- --------------------------------------------------------- -->
 
-	<!-- --------------------------------------------------------- -->
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="description" content="Hoosat Wallet" />
+    <meta name="keywords" content="hoosat htn wallet crypto currency hoosat network dag" />
 
-	<link rel="manifest" href="/manifest.json">
-	<meta name="description" content="Hoosat Wallet">
-	<meta name="keywords" content="hoosat htn wallet crypto currency hoosat network dag">
+    <meta property="og:title" content="Hoosat Wallet" />
+    <meta property="og:description" content="Online Wallet for Hoosat Cryptocurrency" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://wallet.hoosat.fi" />
+    <meta property="og:image" content="https://wallet.hoosat.fi/resources/logo512.png" />
 
-	<meta property="og:title" content="Hoosat Wallet" />
-	<meta property="og:description" content="Online Wallet for Hoosat Cryptocurrency">
-	<meta property="og:type" content="website" />
-	<meta property="og:url" content="https://wallet.hoosat.fi" />
-	<meta property="og:image" content="https://wallet.hoosat.fi/resources/logo512.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <link rel="apple-touch-icon" sizes="57x57" href="/resources/icons/apple-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="/resources/icons/apple-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/resources/icons/apple-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="/resources/icons/apple-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="/resources/icons/apple-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="/resources/icons/apple-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="/resources/icons/apple-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="/resources/icons/apple-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/resources/icons/apple-icon-180x180.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/resources/icons/android-icon-192x192.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/resources/icons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/resources/icons/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/resources/icons/favicon-16x16.png" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="/resources/icons/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#ffffff" />
 
-	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="apple-mobile-web-app-status-bar-style" content="default">
-	<link rel="apple-touch-icon" sizes="57x57" href="/resources/icons/apple-icon-57x57.png">
-	<link rel="apple-touch-icon" sizes="60x60" href="/resources/icons/apple-icon-60x60.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="/resources/icons/apple-icon-72x72.png">
-	<link rel="apple-touch-icon" sizes="76x76" href="/resources/icons/apple-icon-76x76.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="/resources/icons/apple-icon-114x114.png">
-	<link rel="apple-touch-icon" sizes="120x120" href="/resources/icons/apple-icon-120x120.png">
-	<link rel="apple-touch-icon" sizes="144x144" href="/resources/icons/apple-icon-144x144.png">
-	<link rel="apple-touch-icon" sizes="152x152" href="/resources/icons/apple-icon-152x152.png">
-	<link rel="apple-touch-icon" sizes="180x180" href="/resources/icons/apple-icon-180x180.png">
-	<link rel="icon" type="image/png" sizes="192x192" href="/resources/icons/android-icon-192x192.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="/resources/icons/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="96x96" href="/resources/icons/favicon-96x96.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="/resources/icons/favicon-16x16.png">
-	<meta name="msapplication-TileColor" content="#ffffff">
-	<meta name="msapplication-TileImage" content="/resources/icons/ms-icon-144x144.png">
-	<meta name="theme-color" content="#ffffff">
+    <!-- --------------------------------------------------------- -->
 
-	<!-- --------------------------------------------------------- -->
-
-	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="/flow/flow-ux/resources/css/reset.css" />
-	<link rel="stylesheet" type="text/css" href="/flow/flow-ux/flow-ux.css" />
-	<link rel="stylesheet" type="text/css" href="/kaspa-ux/kaspa-ux.css" />
-	<link rel="stylesheet" type="text/css" href="/style/main.css" />
-	<script src="/sockjs/sockjs.js"></script>
-	<script type="text/javascript">
-		var flow = {
-			debug: true,
-			baseUrl: "/flow/flow-ux/",
-			theme: {
-				iconPath: "/kaspa-ux/resources/extern/fonts/fontawesome/sprites/",
-				iconFile: "light",
-				icons: {
-					//"info-circle": "light:acorn"
-				}
-			}
-		}
-		var KaspaConfig = {
-			baseUrl: "/kaspa-ux",
-			ident: "hoosat:ident"
-		}
-		if ('serviceWorker' in navigator) {
-			/*
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="/flow/flow-ux/resources/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="/flow/flow-ux/flow-ux.css" />
+    <link rel="stylesheet" type="text/css" href="/hoosat-ux/hoosat-ux.css" />
+    <link rel="stylesheet" type="text/css" href="/style/main.css" />
+    <script src="/sockjs/sockjs.js"></script>
+    <script type="text/javascript">
+      var flow = {
+        debug: true,
+        baseUrl: "/flow/flow-ux/",
+        theme: {
+          iconPath: "/hoosat-ux/resources/extern/fonts/fontawesome/sprites/",
+          iconFile: "light",
+          icons: {
+            //"info-circle": "light:acorn"
+          },
+        },
+      };
+      var HoosatConfig = {
+        baseUrl: "/hoosat-ux",
+        ident: "hoosat:ident",
+      };
+      if ("serviceWorker" in navigator) {
+        /*
 			window.addEventListener('load', () => {
 				navigator.serviceWorker.register('/service-worker.js').then(registration => {
 					console.log('SW registered: ', registration);
@@ -73,19 +72,17 @@
 			});
 			*/
 
-			navigator.serviceWorker.getRegistrations()
-				.then(function (registrations) {
-					for (let registration of registrations) {
-						registration.unregister();
-					}
-				});
-		}
-
-	</script>
-	<script src="/webcomponentsjs/webcomponents-loader.js"></script>
-	<script type="module" src="/dist/wallet-app.js"></script>
-	<!--script type="module" src="/flow/flow-ux/flow-ux.js"></script-->
-	<!--script type="module">
+        navigator.serviceWorker.getRegistrations().then(function (registrations) {
+          for (let registration of registrations) {
+            registration.unregister();
+          }
+        });
+      }
+    </script>
+    <script src="/webcomponentsjs/webcomponents-loader.js"></script>
+    <script type="module" src="/dist/wallet-app.js"></script>
+    <!--script type="module" src="/flow/flow-ux/flow-ux.js"></script-->
+    <!--script type="module">
 		//import {RPC} from '/@kaspa/grpc-web/dist/index.js';
 		import {RPC} from '/@kaspa/grpc-web/dist/lib/rpc.js';
 		let rpc  = new RPC({clientConfig:{path:"/rpc"}})
@@ -101,28 +98,28 @@
 		}
 		test();
 	</script-->
-	<style type="text/css">
-		html {
-			height: 100%
-		}
+    <style type="text/css">
+      html {
+        height: 100%;
+      }
 
-		body {
-			position: fixed;
-			width: 100vw;
-			height: 100vh;
-			background-color: #116466;
-		}
-	</style>
-</head>
+      body {
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        background-color: #116466;
+      }
+    </style>
+  </head>
 
-<body class="loading flow-theme-light v-box mini-left-menu swipeable-container">
-	<svg style="display:none">
-		<use href="/fonts/fontawesome/sprites/light.svg#home" />
-	</svg>
-	<kaspa-wallet-app></kaspa-wallet-app>
-	<flow-add-to-home message="Add Hoosat wallet App to Home screen"></flow-add-to-home>
-	<!--flow-qrcode-scanner></flow-qrcode-scanner-->
-	<!--video id="live" width="320" height="240" autoplay style="border:5px solid #000000; display:none;"> </video>
+  <body class="loading flow-theme-light v-box mini-left-menu swipeable-container">
+    <svg style="display: none">
+      <use href="/fonts/fontawesome/sprites/light.svg#home" />
+    </svg>
+    <hoosat-wallet-app></hoosat-wallet-app>
+    <flow-add-to-home message="Add Hoosat wallet App to Home screen"></flow-add-to-home>
+    <!--flow-qrcode-scanner></flow-qrcode-scanner-->
+    <!--video id="live" width="320" height="240" autoplay style="border:5px solid #000000; display:none;"> </video>
 	<canvas id="canvas" style="border:5px solid #000000"> </canvas>
 	<script type="module">
 		import {QrScanner} from '/flow-qrscanner/index.js';
@@ -139,6 +136,5 @@
 			})
 		}
 	</script-->
-</body>
-
+  </body>
 </html>
